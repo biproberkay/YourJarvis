@@ -6,8 +6,8 @@ namespace YourJarvis.ApplicationCore.Entities.ArticleAggregate
     public class Article
     {
         public virtual ICollection<ArticleTag> ArticleTags { get; set; }
-        public virtual ICollection<Rating> Ratings { get; set; }
-        public virtual ICollection<Comment> Comments { get; set; }
+        //public virtual ICollection<Rating> Ratings { get; set; }
+        //public virtual ICollection<Comment> Comments { get; set; }
 
         public int ArticleId { get; set; }
         public string ArticleTitle { get; set; }
@@ -23,9 +23,11 @@ namespace YourJarvis.ApplicationCore.Entities.ArticleAggregate
 
 
         //[ForeignKey("ArticleUserIDfk")]   
-        public virtual ApplicationUser ApplicationUser { get; set; }
-        public string UserIDfk { get; set; }
+        //public virtual ApplicationUser ApplicationUser { get; set; }
+        //public string UserIDfk { get; set; }
 
+        public int AlanId { get; set; } 
+        public Alan Alan { get; set; }
 
     }
 }
