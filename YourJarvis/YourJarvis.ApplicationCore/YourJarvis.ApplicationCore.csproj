@@ -1,4 +1,4 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netcoreapp3.1</TargetFramework>
@@ -12,6 +12,11 @@
     <Compile Remove="Entities\Portfolio.cs" />
     <Compile Remove="Entities\SiteOrder.cs" />
     <Compile Remove="Entities\SlideShow.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Business\Abstract\" />
+    <Folder Include="Business\Concrete\" />
   </ItemGroup>
 
 </Project>
