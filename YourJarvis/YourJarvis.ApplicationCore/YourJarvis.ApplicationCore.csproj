@@ -4,4 +4,14 @@
     <TargetFramework>netcoreapp3.1</TargetFramework>
   </PropertyGroup>
 
+  <ItemGroup>
+    <Compile Remove="Entities\ApplicationUser.cs" />
+    <Compile Remove="Entities\ArticleAggregate\Comment.cs" />
+    <Compile Remove="Entities\ArticleAggregate\Rating.cs" />
+    <Compile Remove="Entities\Contact.cs" />
+    <Compile Remove="Entities\Portfolio.cs" />
+    <Compile Remove="Entities\SiteOrder.cs" />
+    <Compile Remove="Entities\SlideShow.cs" />
+  </ItemGroup>
+
 </Project>
