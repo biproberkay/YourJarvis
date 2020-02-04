@@ -23,9 +23,9 @@ namespace YourJarvis.WebUI
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddScoped<IArticleDa, EfCoreDaArticle>();
-            services.AddScoped<IArticleService, ArticleManager>();
-
             services.AddScoped<IAlanDa, EfCoreDaAlan>();
+
+            services.AddScoped<IArticleService, ArticleManager>();
             services.AddScoped<IAlanService, AlanManager>();
 
             services.AddDbContext<YourJarvisContext>();

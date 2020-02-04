@@ -13,8 +13,9 @@ namespace YourJarvis.WebUI.Controllers
         private IArticleService _articleService;
         private IAlanService _alanService;
 
-        public ReadController(IArticleService articleService, 
-                                IAlanService alanService
+        public ReadController(
+                                IArticleService articleService
+                                , IAlanService alanService
                                 )
         {
             _articleService = articleService;
@@ -26,7 +27,9 @@ namespace YourJarvis.WebUI.Controllers
         }
         public IActionResult AlanIndex() 
         {
-            return View(_alanService.GetAll());
+            return
+                //View("AlanIndex");
+                View(_alanService.GetAll());
         }
     }
 }
