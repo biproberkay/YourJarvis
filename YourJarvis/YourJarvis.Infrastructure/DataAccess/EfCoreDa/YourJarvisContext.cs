@@ -6,7 +6,7 @@ using System.Text;
 using YourJarvis.ApplicationCore.Entities;
 using YourJarvis.ApplicationCore.Entities.ArticleAggregate;
 
-namespace YourJarvis.Infrastructure.Data.EfCore
+namespace YourJarvis.Infrastructure.DataAccess.EfCore
 {
     public class YourJarvisContext: DbContext
     {

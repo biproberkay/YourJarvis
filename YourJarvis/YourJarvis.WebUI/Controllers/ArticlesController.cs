@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using YourJarvis.ApplicationCore.Entities.ArticleAggregate;
-using YourJarvis.Infrastructure.Data.EfCore;
+using YourJarvis.Infrastructure.DataAccess.EfCore;
 
 namespace YourJarvis.WebUI.Controllers
 {

@@ -5,7 +5,7 @@ using Microsoft.EntityFrameworkCore.Infrastructure;
 using Microsoft.EntityFrameworkCore.Metadata;
 using Microsoft.EntityFrameworkCore.Migrations;
 using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
-using YourJarvis.Infrastructure.Data.EfCore;
+using YourJarvis.Infrastructure.DataAccess.EfCore;
 
 namespace YourJarvis.Infrastructure.Migrations
 {

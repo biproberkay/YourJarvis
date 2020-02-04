@@ -10,19 +10,11 @@ namespace YourJarvis.WebUI.Controllers
 {
     public class ReadController : Controller
     {
-        private IArticleService _articleService;
-        private IAlanService _alanService;
+        private IServiceRepository<Alan> _alanService;
 
-        public ReadController(IArticleService articleService, 
-                                IAlanService alanService
-                                )
+        public ReadController(IServiceRepository<Alan> alanService)
         {
-            _articleService = articleService;
             _alanService = alanService;
-        }
-        public IActionResult Index()
-        {
-            return View(_articleService.GetAll());
         }
         public IActionResult AlanIndex() 
         {

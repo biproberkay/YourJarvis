@@ -1,11 +1,11 @@
-﻿sing System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
 using YourJarvis.ApplicationCore.ServiceInterfaces;
 
 namespace YourJarvis.Infrastructure.Managers
 {
-    public class ManagerRepository<T> : IServiceRepository<T> 
+    public class ManagerRepository<T> : IServiceRepository<T> where T : class
     {
         private IServiceRepository<T> _serviceRepository;
 
