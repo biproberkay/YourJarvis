@@ -2,24 +2,24 @@
 using System.Collections.Generic;
 using System.Text;
 using YourJarvis.ApplicationCore.Entities.ArticleAggregate;
-using YourJarvis.ApplicationCore.Services;
-using YourJarvis.ApplicationCore.Abstract;
+using YourJarvis.ApplicationCore.ServiceInterfaces;
+using YourJarvis.ApplicationCore.InterfacesDa;
 
 namespace YourJarvis.Infrastructure.Managers
 {
     public class ArticleManager : IArticleService
     {
-        private IArticle _article;
+        private IArticleDa _articleDa;
 
-        public ArticleManager(IArticle article)
+        public ArticleManager(IArticleDa articleDa)
         {
-            _article = article;
+            _articleDa = articleDa;
         }
         public bool Create(Article entity)
         {
             if (Validate(entity))
             {
-                _article.Create(entity);
+                _articleDa.Create(entity);
                 return true;
             }
             return false;
@@ -27,47 +27,47 @@ namespace YourJarvis.Infrastructure.Managers
 
         public void Delete(Article entity)
         {
-            _article.Create(entity);
+            _articleDa.Create(entity);
         }
 
         public List<Article> GetAll()
         {
-            return _article.GetAll();
+            return _articleDa.GetAll();
         }
 
         public Article GetArticleDetails(int id)
         {
-            return _article.GetArticleDetails(id);
+            return _articleDa.GetArticleDetails(id);
         }
 
         public List<Article> GetArticlesByTag(string category, int page, int pageSize)
         {
-            return _article.GetArticlesByTag(category, page, pageSize);
+            return _articleDa.GetArticlesByTag(category, page, pageSize);
         }
 
         public Article GetById(int id)
         {
-            return _article.GetById(id);
+            return _articleDa.GetById(id);
         }
 
         public Article GetByIdWithTags(int id)
         {
-            return _article.GetByIdWithTags(id);
+            return _articleDa.GetByIdWithTags(id);
         }
 
         public int GetCountByTag(string category)
         {
-            return _article.GetCountByTag(category);
+            return _articleDa.GetCountByTag(category);
         }
 
         public void Update(Article entity)
         {
-            _article.Update(entity);
+            _articleDa.Update(entity);
         }
 
-        public void Update(Article entity, int[] tagIds) 
+        public void Update(Article entity, int[] tagIds)
         {
-            _article.Update(entity, tagIds);
+            _articleDa.Update(entity, tagIds);
         }
         public string ErrorMessage { get; set; }
         public bool Validate(Article entity)

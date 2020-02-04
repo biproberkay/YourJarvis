@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using YourJarvis.ApplicationCore.Entities.ArticleAggregate;
-using YourJarvis.ApplicationCore.Abstract;
+using YourJarvis.ApplicationCore.InterfacesDa;
 
 namespace YourJarvis.Infrastructure.Data.EfCore
 {
-    public class EfCoreArticle : EfCoreGenericRepository<Article, YourJarvisContext>, IArticle
+    public class EfCoreDaArticle : EfCoreDaRepository<Article, YourJarvisContext>, IArticleDa
     {
 #if false 
         public Article GetArticleDetails(int id)

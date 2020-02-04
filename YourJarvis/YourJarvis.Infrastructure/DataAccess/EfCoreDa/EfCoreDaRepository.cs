@@ -4,11 +4,11 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
-using YourJarvis.ApplicationCore.Abstract;
+using YourJarvis.ApplicationCore.InterfacesDa;
 
 namespace YourJarvis.Infrastructure.Data.EfCore
 {
-    public class EfCoreGenericRepository<T, TContext> : IRepository<T>
+    public class EfCoreDaRepository<T, TContext> : IRepositoryDa<T>
         where T : class
         where TContext : DbContext, new()
     {

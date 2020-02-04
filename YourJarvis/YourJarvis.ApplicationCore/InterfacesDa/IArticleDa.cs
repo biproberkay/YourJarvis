@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using YourJarvis.ApplicationCore.Entities.ArticleAggregate;
 
-namespace YourJarvis.ApplicationCore.Abstract
+namespace YourJarvis.ApplicationCore.InterfacesDa
 {
-    public interface IArticle : IRepository<Article>
+    public interface IArticleDa : IRepositoryDa<Article>
     {
         List<Article> GetArticlesByTag(string category, int page, int pageSize);
 

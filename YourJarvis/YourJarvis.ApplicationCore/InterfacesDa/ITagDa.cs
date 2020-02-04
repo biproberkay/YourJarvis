@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using YourJarvis.ApplicationCore.Entities.ArticleAggregate;
 
-namespace YourJarvis.ApplicationCore.Abstract 
+namespace YourJarvis.ApplicationCore.InterfacesDa 
 {
-    public interface ITag : IRepository<Tag>
+    public interface ITagDa : IRepositoryDa<Tag>
     {
         Tag GetByIdWithArticles(int id);
         void DeleteFromTag(int categoryId, int productId); 

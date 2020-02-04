@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Linq.Expressions;
 using System.Text;
 
-namespace YourJarvis.ApplicationCore.Abstract
+namespace YourJarvis.ApplicationCore.InterfacesDa
 {
-    public interface IRepository<T>
+    public interface IRepositoryDa<T>
     {
         T GetById(int id);
         T GetOne(Expression<Func<T, bool>> filter);

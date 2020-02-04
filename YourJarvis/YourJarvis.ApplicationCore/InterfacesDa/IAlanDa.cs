@@ -3,9 +3,9 @@ using System.Collections.Generic;
 using System.Text;
 using YourJarvis.ApplicationCore.Entities;
 
-namespace YourJarvis.ApplicationCore.Abstract
+namespace YourJarvis.ApplicationCore.InterfacesDa 
 {
-    public interface IAlan : IRepository<Alan>
+    public interface IAlanDa : IRepositoryDa<Alan>
     {
     }
 }

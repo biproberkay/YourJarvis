@@ -5,13 +5,14 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <Compile Remove="Data\Mappings\ApplicationUserMapping.cs" />
-    <Compile Remove="Data\Mappings\CommentMapping.cs" />
-    <Compile Remove="Data\Mappings\ContactMapping.cs" />
-    <Compile Remove="Data\Mappings\PortfolioMapping.cs" />
-    <Compile Remove="Data\Mappings\RatingMapping.cs" />
-    <Compile Remove="Data\Mappings\SiteOrderMapping.cs" />
-    <Compile Remove="Data\Mappings\SlideShowMapping.cs" />
+    <Compile Remove="DataAccess\Mappings\ApplicationUserMapping.cs" />
+    <Compile Remove="DataAccess\Mappings\CommentMapping.cs" />
+    <Compile Remove="DataAccess\Mappings\ContactMapping.cs" />
+    <Compile Remove="DataAccess\Mappings\PortfolioMapping.cs" />
+    <Compile Remove="DataAccess\Mappings\RatingMapping.cs" />
+    <Compile Remove="DataAccess\Mappings\SiteOrderMapping.cs" />
+    <Compile Remove="DataAccess\Mappings\SlideShowMapping.cs" />
+    <Compile Remove="Managers\ManagerRepository.cs" />
   </ItemGroup>
 
   <ItemGroup>
