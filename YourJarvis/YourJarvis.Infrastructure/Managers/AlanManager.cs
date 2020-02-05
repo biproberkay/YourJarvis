@@ -2,21 +2,22 @@
 using System.Collections.Generic;
 using System.Text;
 using YourJarvis.ApplicationCore.Entities;
+using YourJarvis.ApplicationCore.InterfacesDa;
 using YourJarvis.ApplicationCore.ServiceInterfaces;
 
 namespace YourJarvis.Infrastructure.Managers
 {
     public class AlanManager : IAlanService
     {
-        private IAlanService _alanService;
+        private IAlanDa _alanDa;
 
-        public AlanManager(IAlanService alanService)
+        public AlanManager(IAlanDa alanDa)
         {
-            _alanService = alanService;
+            _alanDa = alanDa;
         }
         public bool Create(Alan entity)
         {
-            _alanService.Create(entity);
+            _alanDa.Create(entity);
             return true;
         }
 
@@ -27,7 +28,7 @@ namespace YourJarvis.Infrastructure.Managers
 
         public List<Alan> GetAll()
         {
-            return _alanService.GetAll();
+            return _alanDa.GetAll();
         }
 
         public Alan GetById(int id)
