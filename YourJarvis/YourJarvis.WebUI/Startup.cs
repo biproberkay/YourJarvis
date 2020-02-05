@@ -46,6 +46,10 @@ namespace YourJarvis.WebUI
 
             app.UseMvc(routes =>
             {
+                routes.MapRoute(name: "AreaRoute",
+                template: "{area:exists}/{controller}/{action}/{id?}/{title?}",
+                defaults: new { controller = "Merhaba", action = "Index" });
+
                 routes.MapRoute(name:"defaut", 
                     template:"{controller=Home}/{action=Index}/{id?}");
 

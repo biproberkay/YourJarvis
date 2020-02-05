@@ -14,4 +14,9 @@
     <Compile Remove="Entities\SlideShow.cs" />
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="Business\Abstract\" />
+    <Folder Include="Business\Concrete\" />
+  </ItemGroup>
+
 </Project>
