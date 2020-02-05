@@ -8,6 +8,7 @@ using Microsoft.AspNetCore.Http;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using YourJarvis.ApplicationCore.Entities;
+using YourJarvis.ApplicationCore.Entities.ArticleAggregate;
 using YourJarvis.ApplicationCore.InterfacesDa;
 using YourJarvis.ApplicationCore.ServiceInterfaces;
 using YourJarvis.Infrastructure.DataAccess.EfCore;
@@ -21,9 +22,12 @@ namespace YourJarvis.WebUI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddTransient<IRepositoryDa<Alan>, EfCoreDaRepository<Alan,YourJarvisContext>>();
-            services.AddTransient<IServiceRepository<Alan>, ManagerRepository<Alan>>();
-            
+            services.AddScoped<IRepositoryDa<Alan>, EfCoreDaRepository<Alan,YourJarvisContext>>();
+            services.AddScoped<IServiceRepository<Alan>, ManagerRepository<Alan>>();
+
+            services.AddScoped<IRepositoryDa<Article>, EfCoreDaRepository<Article, YourJarvisContext>>();
+            services.AddScoped<IServiceRepository<Article>, ManagerRepository<Article>>();
+
             services.AddDbContext<YourJarvisContext>();
             services.AddMvc(options => options.EnableEndpointRouting = false);
         }

@@ -1,0 +1,84 @@
+﻿@model IEnumerable<YourJarvis.ApplicationCore.Entities.ArticleAggregate.Article>
+
+@{
+    ViewData["Title"] = "ArticleIndex";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h1>ArticleIndex</h1>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleTitle)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleSummary)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleDateCreated)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleDateModified)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleBody)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleViewCount)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.ArticleStatus)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.IsOpenForComment)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Alan)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleTitle)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleSummary)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleDateCreated)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleDateModified)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleBody)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleViewCount)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.ArticleStatus)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.IsOpenForComment)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Alan.Id)
+            </td>
+            <td>
+                <a asp-action="Edit" asp-route-id="@item.ArticleId">Edit</a> |
+                <a asp-action="Details" asp-route-id="@item.ArticleId">Details</a> |
+                <a asp-action="Delete" asp-route-id="@item.ArticleId">Delete</a>
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
