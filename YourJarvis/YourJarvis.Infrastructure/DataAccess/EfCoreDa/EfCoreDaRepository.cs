@@ -6,7 +6,7 @@ using System.Linq.Expressions;
 using System.Text;
 using YourJarvis.ApplicationCore.InterfacesDa;
 
-namespace YourJarvis.Infrastructure.Data.EfCore
+namespace YourJarvis.Infrastructure.DataAccess.EfCore
 {
     public class EfCoreDaRepository<T, TContext> : IRepositoryDa<T>
         where T : class
@@ -48,13 +48,6 @@ namespace YourJarvis.Infrastructure.Data.EfCore
             }
         }
 
-        public virtual T GetOne(Expression<Func<T, bool>> filter)
-        {
-            using (var context = new TContext())
-            {
-                return context.Set<T>().Where(filter).SingleOrDefault();
-            }
-        }
 
         public virtual void Update(T entity)
         {

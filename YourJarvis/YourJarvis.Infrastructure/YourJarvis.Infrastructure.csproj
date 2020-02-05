@@ -12,7 +12,6 @@
     <Compile Remove="DataAccess\Mappings\RatingMapping.cs" />
     <Compile Remove="DataAccess\Mappings\SiteOrderMapping.cs" />
     <Compile Remove="DataAccess\Mappings\SlideShowMapping.cs" />
-    <Compile Remove="Managers\ManagerRepository.cs" />
   </ItemGroup>
 
   <ItemGroup>
@@ -30,6 +29,10 @@
 
   <ItemGroup>
     <ProjectReference Include="..\YourJarvis.ApplicationCore\YourJarvis.ApplicationCore.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="DataAccess\" />
   </ItemGroup>
 
 </Project>

@@ -1,17 +1,18 @@
-﻿sing System;
+﻿using System;
 using System.Collections.Generic;
 using System.Text;
+using YourJarvis.ApplicationCore.InterfacesDa;
 using YourJarvis.ApplicationCore.ServiceInterfaces;
 
 namespace YourJarvis.Infrastructure.Managers
 {
-    public class ManagerRepository<T> : IServiceRepository<T> 
+    public class ManagerRepository<T> : IServiceRepository<T> where T : class
     {
-        private IServiceRepository<T> _serviceRepository;
+        private IRepositoryDa<T> _daRepository;
 
-        public ManagerRepository(IServiceRepository<T> serviceRepository)
+        public ManagerRepository(IRepositoryDa<T> daRepository)
         {
-            _serviceRepository = serviceRepository;
+            _daRepository = daRepository;
         }
         public bool Create(T entity)
         {
@@ -25,7 +26,7 @@ namespace YourJarvis.Infrastructure.Managers
 
         public List<T> GetAll()
         {
-            return _serviceRepository.GetAll();
+            return _daRepository.GetAll();
         }
 
         public T GetById(int id)
