@@ -21,7 +21,8 @@ namespace YourJarvis.Infrastructure.DataAccess.EfCore
 
         public DbSet<Alan> Alans { get; set; }
         public DbSet<Article> Articles { get; set; }
-        public DbSet<Tag> Tags { get; set; } 
+        public DbSet<Tag> Tags { get; set; }
+        public DbSet<ArticleTag> ArticleTags { get; set; } 
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {

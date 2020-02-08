@@ -7,6 +7,8 @@ namespace YourJarvis.ApplicationCore.Entities
 {
     public class Alan
     {
+
+        //[DatabaseGenerated(DatabaseGeneratedOption.None)]
         public int Id { get; set; }
         public string Title { get; set; }
 

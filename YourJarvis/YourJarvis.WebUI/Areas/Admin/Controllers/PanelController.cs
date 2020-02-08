@@ -7,7 +7,7 @@ using Microsoft.AspNetCore.Mvc;
 namespace YourJarvis.WebUI.Areas.Admin.Controllers
 {
     [Area("Admin")]
-    public class AlanController : Controller
+    public class PanelController : Controller
     {
         public IActionResult Index()
         {

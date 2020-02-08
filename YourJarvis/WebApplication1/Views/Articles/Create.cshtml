@@ -1,0 +1,72 @@
+﻿@model YourJarvis.ApplicationCore.Entities.ArticleAggregate.Article
+
+@{
+    ViewData["Title"] = "Create";
+}
+
+<h1>Create</h1>
+
+<h4>Article</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Create">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="ArticleTitle" class="control-label"></label>
+                <input asp-for="ArticleTitle" class="form-control" />
+                <span asp-validation-for="ArticleTitle" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArticleSummary" class="control-label"></label>
+                <input asp-for="ArticleSummary" class="form-control" />
+                <span asp-validation-for="ArticleSummary" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArticleDateCreated" class="control-label"></label>
+                <input asp-for="ArticleDateCreated" class="form-control" />
+                <span asp-validation-for="ArticleDateCreated" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArticleDateModified" class="control-label"></label>
+                <input asp-for="ArticleDateModified" class="form-control" />
+                <span asp-validation-for="ArticleDateModified" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArticleBody" class="control-label"></label>
+                <input asp-for="ArticleBody" class="form-control" />
+                <span asp-validation-for="ArticleBody" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArticleViewCount" class="control-label"></label>
+                <input asp-for="ArticleViewCount" class="form-control" />
+                <span asp-validation-for="ArticleViewCount" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ArticleStatus" class="control-label"></label>
+                <input asp-for="ArticleStatus" class="form-control" />
+                <span asp-validation-for="ArticleStatus" class="text-danger"></span>
+            </div>
+            <div class="form-group form-check">
+                <label class="form-check-label">
+                    <input class="form-check-input" asp-for="IsOpenForComment" /> @Html.DisplayNameFor(model => model.IsOpenForComment)
+                </label>
+            </div>
+            <div class="form-group">
+                <label asp-for="AlanId" class="control-label"></label>
+                <select asp-for="AlanId" class ="form-control" asp-items="ViewBag.AlanId"></select>
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Create" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+@section Scripts {
+    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+}

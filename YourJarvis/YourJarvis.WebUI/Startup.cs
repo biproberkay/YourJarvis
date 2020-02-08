@@ -47,11 +47,14 @@ namespace YourJarvis.WebUI
             app.UseMvc(routes =>
             {
                 routes.MapRoute(name: "AreaRoute",
-                template: "{area:exists}/{controller}/{action}/{id?}/{title?}",
-                defaults: new { controller = "Merhaba", action = "Index" });
+                template: "{area:exists}/{controller}/{action}/{id?}/{title?}"
+                //,template: "{area:exists}/{controller=Panel}/{action=Index}/{id?}/{title?}",
+                //defaults: new { controller = "Panel", action = "Index" }
+                );
 
-                routes.MapRoute(name:"defaut", 
-                    template:"{controller=Home}/{action=Index}/{id?}");
+                routes.MapRoute(name: "defaut",
+                //template:"{controller=Home}/{action=Index}/{id?}");
+                template: "{area=admin}/{controller=Panel}/{action=Index}/{id?}/{title?}");
 
             });
         }
