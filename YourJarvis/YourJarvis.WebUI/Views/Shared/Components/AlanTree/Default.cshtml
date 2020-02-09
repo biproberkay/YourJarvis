@@ -1,0 +1,26 @@
+﻿@model IEnumerable<YourJarvis.ApplicationCore.Entities.Alan>
+
+@foreach (var item in Model.Where(m => m.Level == 1))
+{
+    <div class="nav-item" href="#">
+        <a class="btn btn-info" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-@item.Id" href="#collapse-@item.Id" role="button">@item.Title</a>
+        <div class="collapse" id="collapse-@item.Id">
+            @foreach (var iitem in Model.Where(a => a.ParentId == item.Id))
+            {
+                <div class="dropdown">
+                    <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">@iitem.Title</a>
+                    <div class="dropdown-menu" role="menu">
+                        @foreach (var iiitem in Model.Where(a => a.ParentId == iitem.Id))
+                        {
+                            <a class="dropdown-item" role="presentation" href="#">@iiitem.Title</a>
+
+                        }
+                    </div>
+                </div>
+
+            }
+        </div>
+    </div>
+
+}
+

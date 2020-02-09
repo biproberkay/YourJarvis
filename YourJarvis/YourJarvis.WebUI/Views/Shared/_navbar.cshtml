@@ -1,0 +1,116 @@
+﻿<nav class="navbar navbar-dark navbar-expand-md fixed-top bg-primary" id="navbar">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="/">Berkay</a>
+        <button data-toggle="collapse" class="navbar-toggler" data-target="#navcol-1">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse justify-content-between"
+             id="navcol-1">
+            <div class="nav navbar-nav">
+                <a class="nav-item nav-link" href="/admin/alans">Alanlar</a>
+                <a class="nav-item nav-link" href="/Atolye/articles">Makale</a>
+                <a class="nav-item nav-link" href="/atolye/tags">Etiketler</a>
+                <a class="nav-item nav-link" href="/atolye/articletags">Etiketleme</a>
+                @await Component.InvokeAsync("AlanTree")
+                <div class="nav-item" href="#">
+                    <a class="btn btn-info" data-toggle="collapse" aria-expanded="false" aria-controls="collapse-1" href="#collapse-1" role="button">Yazılım Alanları</a>
+                    <div class="collapse" id="collapse-1">
+                        <div class="dropdown">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Programlama</a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="#">Algoritma</a>
+                                <a class="dropdown-item" role="presentation" href="#">Console</a>
+                                <a class="dropdown-item" role="presentation" href="#">WPF</a>
+                                <a class="dropdown-item" role="presentation" href="#">.Net Core</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Web Programlama</a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="#">HTML</a>
+                                <a class="dropdown-item" role="presentation" href="#">CSS</a>
+                                <a class="dropdown-item" role="presentation" href="#">JavaScript</a>
+                                <a class="dropdown-item" role="presentation" href="#">PHP</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Mobil Programlama</a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="#">Ionic</a>
+                                <a class="dropdown-item" role="presentation" href="#">Angular</a>
+                                <a class="dropdown-item" role="presentation" href="#">TypeScript</a>
+                                <a class="dropdown-item" role="presentation" href="#">Node.js</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">VeriTabanı</a>
+                            <div class="dropdown-menu" role="menu">
+                                <a class="dropdown-item" role="presentation" href="#">Veritabanı Yönetim Sistemleri</a>
+                                <a class="dropdown-item" role="presentation" href="#">ORM ler</a>
+                                <a class="dropdown-item" role="presentation" href="#">Veritabanı 1</a>
+                                <a class="dropdown-item" role="presentation" href="#">Veritabanı 2</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a class="dropdown-toggle nav-link" data-toggle="dropdown" aria-expanded="false" href="#">Java</a>
+                            <div class="dropdown-menu" role="menu"><a class="dropdown-item" role="presentation" href="#">Java</a></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="nav-item" href="#">
+                    <a class="btn btn-info" data-toggle="collapse" href="#collapse-2" type="button">
+                        Bilgi İşlem Alanları
+                    </a>
+                    <div class="collapse " id="collapse-2">
+                        <div class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle nav-link" href="#">Network </a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Algoritma</a>
+                                <a class="dropdown-item" href="#">C#</a>
+                                <a class="dropdown-item" href="#">Console</a>
+                                <a class="dropdown-item" href="#">WPF</a>
+                                <a class="dropdown-item" href="#">.Net Core</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle nav-link" href="#">Sunucu Yönetimi</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">HTML</a>
+                                <a class="dropdown-item" href="#">CSS</a>
+                                <a class="dropdown-item" href="#">JavaScript</a>
+                                <a class="dropdown-item" href="#">PHP</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle nav-link" href="#">Siber Güvenlik</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Ionic</a>
+                                <a class="dropdown-item" href="#">Angular</a>
+                                <a class="dropdown-item" href="#">TypeScript</a>
+                                <a class="dropdown-item" href="#">Node.js</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle nav-link" href="#">Ardiuno</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">Veritabanı Yönetim Sistemleri</a>
+                                <a class="dropdown-item" href="#">ORM ler</a>
+                                <a class="dropdown-item" href="#">Veritabanı 1</a>
+                                <a class="dropdown-item" href="#">Veritabanı 2</a>
+                            </div>
+                        </div>
+                        <div class="dropdown">
+                            <a data-toggle="dropdown" class="dropdown-toggle nav-link" href="#">Grafik</a>
+                            <div class="dropdown-menu">
+                                <a class="dropdown-item" href="#">
+                                    Java
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</nav>
