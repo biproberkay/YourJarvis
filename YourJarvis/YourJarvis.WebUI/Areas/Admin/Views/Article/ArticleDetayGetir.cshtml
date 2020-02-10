@@ -1,0 +1,13 @@
+﻿@model YourJarvis.WebUI.Areas.Admin.Models.ArticleDetayGetirModel
+@{
+    ViewData["Title"] = "ArticleDetayGetir";
+    Layout = "~/Views/Shared/_adminLayout.cshtml";
+}
+
+<h1>ArticleDetayGetir</h1>
+@Model.Article.Alan.Title
+@Model.Article.ArticleTitle
+@foreach (var tag in Model.Tags)
+{
+    @tag.TagName
+}
