@@ -4,6 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Linq.Expressions;
 using System.Text;
+using System.Threading.Tasks;
 using YourJarvis.ApplicationCore.InterfacesDa;
 
 namespace YourJarvis.Infrastructure.DataAccess.EfCore
@@ -57,5 +58,55 @@ namespace YourJarvis.Infrastructure.DataAccess.EfCore
                 context.SaveChanges();
             }
         }
+
+        #region IDCUD
+
+        public virtual async Task<List<T>> Index()
+        {
+            using (var context = new TContext())
+            {
+                return await context.Set<T>().ToListAsync();
+            }
+        }
+
+        public virtual async Task<T> Details(int id)
+        {
+            using (var context = new TContext())
+            {
+                return await context.Set<T>().FindAsync(id);
+            }
+        }
+
+        public virtual void CreateY(T entity) 
+        {
+            using (var context = new TContext())
+            {
+                context.Set<T>().Add(entity);
+                context.SaveChangesAsync();
+            }
+        }
+
+        public virtual async Task<T> Edit(int? id)
+        {
+            using (var context = new TContext())
+            {
+                return await context.Set<T>().FindAsync(id);
+            }
+        }
+
+
+        public void EditY(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        public void DeleteY(T entity)
+        {
+            throw new NotImplementedException();
+        }
+
+        
+
+        #endregion
     }
 }
