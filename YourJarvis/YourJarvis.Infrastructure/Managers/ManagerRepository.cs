@@ -14,29 +14,31 @@ namespace YourJarvis.Infrastructure.Managers
         {
             _daRepository = daRepository;
         }
-        public bool Create(T entity)
+        public List<T> Index()
         {
-            throw new NotImplementedException();
+            return _daRepository.Index();
+        }
+
+        public T Details(int id)
+        {
+            return _daRepository.Details(id);
+        }
+
+        public void Create(T entity)
+        {
+            _daRepository.Create(entity);
+        }
+
+        public void Edit(T entity)
+        {
+            _daRepository.Edit(entity);
         }
 
         public void Delete(T entity)
         {
-            throw new NotImplementedException();
+            _daRepository.Delete(entity);
         }
 
-        public List<T> GetAll()
-        {
-            return _daRepository.GetAll();
-        }
 
-        public T GetById(int id)
-        {
-            throw new NotImplementedException();
-        }
-
-        public void Update(T entity)
-        {
-            throw new NotImplementedException();
-        }
     }
 }

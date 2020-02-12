@@ -7,10 +7,10 @@ namespace YourJarvis.ApplicationCore.ServiceInterfaces
 {
     public interface IServiceRepository<T>  where T : class
     {
-        T GetById(int id);
-        List<T> GetAll();
-        bool Create(T entity);
-        void Update(T entity);
+        List<T> Index(); 
+        T Details(int id); 
+        void Create(T entity);
+        void Edit(T entity); 
         void Delete(T entity);
     }
 }

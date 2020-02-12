@@ -11,7 +11,6 @@ using YourJarvis.ApplicationCore.Entities;
 using YourJarvis.ApplicationCore.Entities.ArticleAggregate;
 using YourJarvis.ApplicationCore.InterfacesDa;
 using YourJarvis.ApplicationCore.ServiceInterfaces;
-using YourJarvis.Infrastructure.DataAccess.EfCore;
 using YourJarvis.Infrastructure.DataAccess.EfCoreDa;
 using YourJarvis.Infrastructure.Managers;
 
@@ -23,14 +22,12 @@ namespace YourJarvis.WebUI
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddScoped<IRepositoryDa<Alan>, EfCoreDaRepository<Alan,YourJarvisContext>>();
-            services.AddScoped<IServiceRepository<Alan>, ManagerRepository<Alan>>();
-
             services.AddScoped<IRepositoryDa<Article>, EfCoreDaRepository<Article, YourJarvisContext>>();
             services.AddScoped<IServiceRepository<Article>, ManagerRepository<Article>>();
 
-            services.AddScoped<IArticleDa, EfCoreArticleDa>();
-            services.AddScoped<IArticleService, ArticleManager>();
+
+            services.AddScoped<IRepositoryDa<Alan>, EfCoreDaRepository<Alan, YourJarvisContext>>();
+            services.AddScoped<IServiceRepository<Alan>, ManagerRepository<Alan>>();
 
             services.AddDbContext<YourJarvisContext>();
             services.AddMvc(options => options.EnableEndpointRouting = false);

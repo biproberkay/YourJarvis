@@ -6,7 +6,7 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.AspNetCore.Mvc.Rendering;
 using Microsoft.EntityFrameworkCore;
 using YourJarvis.ApplicationCore.Entities;
-using YourJarvis.Infrastructure.DataAccess.EfCore;
+using YourJarvis.Infrastructure.DataAccess.EfCoreDa;
 
 namespace YourJarvis.WebUI.Areas.Admin.Controllers
 {

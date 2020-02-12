@@ -18,7 +18,7 @@ namespace YourJarvis.WebUI.ViewComponents
         }
         public IViewComponentResult Invoke()
         {
-            return View(_alanService.GetAll());
+            return View(_alanService.Index());
         }
     }
 }
